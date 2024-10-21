@@ -48,6 +48,8 @@ photo. The 2-norm distance is then computed between these estimated coordinates 
 coordinates of the previous photo in the matched pair. If the distance is less than a threshold, it is 
 considered an inlier. Finally, the shift with the most inliers is selected as the final shift. 
 
+![image](https://github.com/user-attachments/assets/2d08fb07-ac44-4e83-a952-d729a3467326)
+
 Step 6. End to end alignment & Step 7. Rectangling 
 The corresponding implementations are alingment(img, shifts) and rectangling(img). 
 For end-to-end alignment of panoramas that gradually slope upwards or downwards, the method used 
@@ -55,3 +57,5 @@ is quite simple, basically following the lecture notes to distribute the displac
 For the rectangling part, first convert the image to grayscale, then if a row is determined to contain a 
 proportion of no-information pixels (black, value=0) exceeding a certain threshold, the entire row is 
 removed. This process is applied to trim the top and bottom, resulting in the final panoramic image.
+
+![image](https://github.com/user-attachments/assets/da753773-0ad7-4ea4-bb61-8b8eefcdbf46)
